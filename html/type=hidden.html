@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="hidden" name="field" value="value">
+  <!-- 
+    作用:
+      1.隐藏域在页面中对于用户是不可见的, 在表单中插入域的目的在于收集或发送信息,以利于被处理表单的程序所是使用, 浏览者单机发送表单的时候, 隐藏域的信息也被发送到服务器
+      2.有的时候我们要给用户一些信息,提交表单数据需要确定身份如sessionkey,兼容性较高
+      3. javascript不支持全局变量, 但是有时要使用全局变量就可以把值存在隐藏域当中
+
+    实际例子:
+      F12之后, 在源代码对value的手动更改值,更改成功后如果不添加代码, 那么将这个错误的值通过表单提交, 将对后台数据造成严重的影响.
+   -->
+</body>
+</html>
