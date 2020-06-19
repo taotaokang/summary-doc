@@ -1,0 +1,9 @@
+/* 
+  1. 通过Link引用CSS
+  <link rel="styleshect" href="style.css">
+
+  2. 导入样式 @import "style.css"
+
+  3. 内部样式表
+  <style> style... </style>
+*/

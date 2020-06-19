@@ -1,0 +1,11 @@
+/* 
+  视网膜分辨率的图形, 当中使用什么技术?
+
+  1. 使用高分辨率的图形(显示尺寸的两倍)来处理视网膜显示, 也就是2倍图
+
+  2. 使用媒体查询 像@media only scree and(min-device-pixel-ratio:2){},然后改变background-image,不同分辨率的屏幕使用不同的照片
+
+  3. 对于图标类的图形, 使用svg和字体图标, 因为在任何分辨率下都不会失真
+
+  4. 检查window.devicePixelRatio的值, 利用js将img的src属性修改, 用更高分辨率的版本替换
+*/
