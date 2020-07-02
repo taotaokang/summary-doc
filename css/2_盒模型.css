@@ -1,0 +1,16 @@
+/* 
+  w3c盒模型(标准盒子模型)
+    由margin,border,padding,content(不包括其他部分)组成
+
+  IE盒子模型
+    由margin,border,padding,content(包含了border和padding)
+
+  <div style="width:100px;height="100px;border:10px;padding:10px;"></div>
+  标准盒子模型：总宽度=content100px + border10px*2 + padding10px*2 //140px
+  怪异盒子模型: 总宽度=content60px + border10px*2 + padding10px*2 //100px
+
+
+  box-sizing： content-box || border-box；//css3 box-sizing设置为border-box将使用怪异盒子模型
+  当怪异盒子的宽度小于border+padding的宽度的时候，content width将变为0，盒子的宽度会被border和padding的总宽度撑开3
+
+*/

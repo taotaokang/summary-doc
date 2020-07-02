@@ -1,0 +1,40 @@
+/* 
+  什么是css hack?
+  由于不同厂商的浏览器, internet, firefox, chrome, 或同一厂商浏览器版本不同,如IE6和IE7对CSS解析完全不一样, 因此会导致页面渲染效果不一样
+
+  查询浏览器属性兼容: https://caniuse.com/
+  查看hack写法: http://browserhacks.com/
+
+  css hack三种表现形式:
+  1.属性前缀法: IE6能识别 _ * , IE7能识别* 但不能识别_, IE6-IE10都认识\9, 但firefox不能识别_ * \9
+  2.选择器前缀法: 例如IE6能识别html .call{}, IE7能识别+html,.class{}或者*.first-clild+html .class{}
+  3.IE条件注释法{HTML条件注释Hack}:针对所有的IE(IE10+已经不支持注释了),针对IE6版本及以下版本, 这类Hack不仅对css生效, 对写在判断语句的代码都生效
+
+    IE6识别 * 、_
+    IE7识别 * 、+
+    IE8识别 * 、\9,\0
+    只有IE8识别  \0/   
+    ie9只识别：\9
+    Firefox什么都不识别
+*
+/* 属性前缀写法 */
+.box{
+  color: pink;
+  _color:pink;/*ie6能识别*/
+  *color:pink;/*ie7能识别*/
+  color: pink\9;/*ie/edge6-8能识别*/
+}
+/* IE条件注释法 ie10+已经不支持了 */
+/* 
+  条件注释
+  !	   [if !IE]	        非IE
+  lt	 [if lt IE 5.5]	  小于IE 5.5
+  lte	 [if lte IE 6]	  小于等于IE6
+  gt	 [if gt IE 5]	    大于IE5
+  gte	 [if gte IE 7]	  大于等于IE7
+  \	   [if (IE 6)(IE 7)]  IE6或者IE7
+
+  <!–-[if IE 7]>
+  <link rel="stylesheet" href="ie7.css" type="text/css" />
+  <![endif]–->
+*/

@@ -27,7 +27,7 @@
     5.在HTTP头部自定义属性并验证
       使用token作为自定义属性放在HTTP自定义属性,通过XMLHttpRequest这个类,一次性给所有请求都加上一个csrfToken 这个http头属性, 通过XMLHttpRequest地址不会被记录到浏览器地址, 也不用担心token会透过referer泄露到其他网站中去
 
-    6.AngularJs 提供食物CSRF方案
+    6.AngularJs 提供CSRF方案
       当cookie中存在名为CSRF-TOKEN的cookie 会在请求中带上名为X-XSRF-TOKEN的http header
       如果要修改默认名称:
         $httpProvider.defaults.xsrfCookieName = 'csrftoken';
